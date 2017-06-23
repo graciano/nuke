@@ -6,5 +6,6 @@ then
   rm -rf ~/.config/
   rm -rf ~/.cache/
   rm -rf ~/.ssh/
+  rm ~/.bash*
 fi
 
