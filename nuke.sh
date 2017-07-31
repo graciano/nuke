@@ -7,5 +7,8 @@ then
   rm -rf ~/.cache/
   rm -rf ~/.ssh/
   rm ~/.bash*
+  rm -rf ~/Library/Application Support/Firefox/Profiles/
+  rm -rf ~/Library/Mozilla/Firefox/Profiles/
+  rm -rf ~/.mozilla/firefox/
 fi
 
