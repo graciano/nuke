@@ -16,5 +16,6 @@ then
   rm -rf ~/Downloads/*
   rm -rf ~/Desktop/*
   rm -rf ~/Documents/*
-  rm ~/Library/Application\ Support/Franz/
+  rm -rf ~/Library/Application\ Support/Franz/
+  rm -rf ~/Library/Caches/*
 fi
