@@ -13,5 +13,6 @@ then
   rm -rf ~/Downloads/*
   rm -rf ~/Desktop/*
   rm -rf ~/Documents/*
+  rm ~/Library/Application\ Support/Franz/
 fi
 
