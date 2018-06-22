@@ -10,9 +10,11 @@ then
   rm -rf ~/Library/Application Support/Firefox/Profiles/
   rm -rf ~/Library/Mozilla/Firefox/Profiles/
   rm -rf ~/.mozilla/firefox/
+  rm -rf ~/Library/Application Support/Google/Chrome/Profiles/
+  rm -rf ~/.config/google-chrome/Default
+  rm -rf ~/.cache/google-chrome
   rm -rf ~/Downloads/*
   rm -rf ~/Desktop/*
   rm -rf ~/Documents/*
   rm ~/Library/Application\ Support/Franz/
 fi
-
