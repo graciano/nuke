@@ -10,5 +10,8 @@ then
   rm -rf ~/Library/Application Support/Firefox/Profiles/
   rm -rf ~/Library/Mozilla/Firefox/Profiles/
   rm -rf ~/.mozilla/firefox/
+  rm -rf ~/Downloads/*
+  rm -rf ~/Desktop/*
+  rm -rf ~/Documents/*
 fi
 
