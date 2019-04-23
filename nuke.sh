@@ -1,21 +1,28 @@
 #!/bin/bash
+FILES=(
+  "~/.config/"
+  "~/.cache/"
+  "~/.ssh/"
+  "bash*"
+  "~/Library/Application Support/Firefox/Profiles/"
+  "~/Library/Mozilla/Firefox/Profiles/"
+  "~/.mozilla/firefox/"
+  "~/Library/Application Support/Google/Chrome/Profiles/"
+  "~/.config/google-chrome/Default"
+  "~/.cache/google-chrome"
+  "~/Downloads/*"
+  "~/Desktop/*"
+  "~/Documents/*"
+  "~/Library/Application\ Support/Franz/"
+  "~/Library/Caches/*"
+)
 read -p "Are you sure? " -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-  shred -rf ~/.config/
-  shred -rf ~/.cache/
-  shred -rf ~/.ssh/
-  shred ~/.bash*
-  shred -rf ~/Library/Application Support/Firefox/Profiles/
-  shred -rf ~/Library/Mozilla/Firefox/Profiles/
-  shred -rf ~/.mozilla/firefox/
-  shred -rf ~/Library/Application Support/Google/Chrome/Profiles/
-  shred -rf ~/.config/google-chrome/Default
-  shred -rf ~/.cache/google-chrome
-  shred -rf ~/Downloads/*
-  shred -rf ~/Desktop/*
-  shred -rf ~/Documents/*
-  shred -rf ~/Library/Application\ Support/Franz/
-  shred -rf ~/Library/Caches/*
+  for pattern in "${FILES[@]}"
+  do
+    shred $pattern
+    rm -rf $pattern
+  done
 fi
