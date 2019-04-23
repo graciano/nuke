@@ -22,7 +22,10 @@ if [[ $REPLY =~ ^[Yy]$ ]]
 then
   for pattern in "${FILES[@]}"
   do
-    shred $pattern
+    # checking if shred is available
+    if [ -x "$(command -v shred)" ]; then
+      shred $pattern
+    fi
     rm -rf $pattern
   done
 fi
