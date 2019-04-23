@@ -3,19 +3,19 @@ read -p "Are you sure? " -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-  rm -rf ~/.config/
-  rm -rf ~/.cache/
-  rm -rf ~/.ssh/
-  rm ~/.bash*
-  rm -rf ~/Library/Application Support/Firefox/Profiles/
-  rm -rf ~/Library/Mozilla/Firefox/Profiles/
-  rm -rf ~/.mozilla/firefox/
-  rm -rf ~/Library/Application Support/Google/Chrome/Profiles/
-  rm -rf ~/.config/google-chrome/Default
-  rm -rf ~/.cache/google-chrome
-  rm -rf ~/Downloads/*
-  rm -rf ~/Desktop/*
-  rm -rf ~/Documents/*
-  rm -rf ~/Library/Application\ Support/Franz/
-  rm -rf ~/Library/Caches/*
+  shred -rf ~/.config/
+  shred -rf ~/.cache/
+  shred -rf ~/.ssh/
+  shred ~/.bash*
+  shred -rf ~/Library/Application Support/Firefox/Profiles/
+  shred -rf ~/Library/Mozilla/Firefox/Profiles/
+  shred -rf ~/.mozilla/firefox/
+  shred -rf ~/Library/Application Support/Google/Chrome/Profiles/
+  shred -rf ~/.config/google-chrome/Default
+  shred -rf ~/.cache/google-chrome
+  shred -rf ~/Downloads/*
+  shred -rf ~/Desktop/*
+  shred -rf ~/Documents/*
+  shred -rf ~/Library/Application\ Support/Franz/
+  shred -rf ~/Library/Caches/*
 fi
